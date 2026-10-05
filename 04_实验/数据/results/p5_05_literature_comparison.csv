@@ -1,0 +1,17 @@
+method,category,RMSE_pp,MAE_pp,condition,source,note
+Coulomb Counting,Model-based,~0.01–0.6,~0.01–0.5,理想条件（无初始偏差、无噪声）,[our] ideal lower bound,实际不可用（需精确初始 SOC + 无传感器误差）
+EKF (1RC-ECM),Model-based,2.73,2.21,"25°C, test_id, +10pp init bias",[our] P5-01 M2,"McMaster 18650PF, 稳态口径"
+EKF (1RC-ECM),Model-based,4.84–23.59,2.91–23.15,OOD 10/0/−10/−20°C,[our] P5-01 M2,低温+高动态工况退化严重
+UKF,Model-based,~2.5–4.0,~2.0–3.5,"25°C, 动态工况",[How19] 典型值,比 EKF 略好（非线性处理更优），但同量级
+PF (粒子滤波),Model-based,~3.0–5.0,~2.5–4.0,"25°C, 动态工况",[How19] 典型值,计算量大，精度不一定优于 EKF/UKF
+LSTM (纯 NN),Data-driven,~1.0–3.0,~0.8–2.5,同分布 25°C,[Vidal20] 典型值,OOD 泛化差（见下方 Pure NN OOD）
+GRU (纯 NN),Data-driven,~1.0–2.5,~0.8–2.0,同分布 25°C,[Vidal20] 典型值,与 LSTM 同量级，参数更少
+Pure NN (本项目),Data-driven,1.23,0.98,25°C test_id,[our] P5-01 M5,"GRU16, 5 文件训练, 直接回归 SOC"
+Pure NN OOD (本项目),Data-driven,16.1–37.8,12.7–32.4,OOD 0/−20°C,[our] P5-01 M5,OOD 灾难性失败 → 混合架构必要性
+KF + ML (Yuan 2023),Hybrid,~0.8–1.5,~0.6–1.2,"25°C, UDDS/HWFET",[Yuan23] Table 1,NN 回归 SOC（非学残差），25°C 单温度
+EKF + NN A2-0 (本项目),Hybrid,0.63,0.49,25°C test_id,[our] P5-01 M3,仅测量量，无 EKF 内部分量
+"EKF + NN A2-3 (本项目, 主模型)",Hybrid,0.60,0.45,25°C test_id,[our] P5-01 M4,完整特征（ν+NIS+K+diag(P)），最优
+EKF + NN A2-3 OOD (本项目),Hybrid,4.51–21.65,3.62–21.36,OOD 10/0/−10/−20°C,[our] P5-01 M4,跨温度鲁棒性（A2-3 全场最优）
+EKF on MCU (典型),MCU-deployed,~3–8,~2–6,"STM32F1/F4, 25°C",[How19][典型值],纯 EKF 部署，无 NN 修正
+NN on MCU (典型),MCU-deployed,~2–5,~1.5–4,"STM32F4, int8, 25°C",[典型值],量化后精度有损，资源报告不完整
+"EKF+NN on MCU (本项目, 待验证)",MCU-deployed,待测,待测,"STM32F407, float16, 25°C",[our] P4 待做,"float16 TFLite, ~105 KB, 1.8k 参数"

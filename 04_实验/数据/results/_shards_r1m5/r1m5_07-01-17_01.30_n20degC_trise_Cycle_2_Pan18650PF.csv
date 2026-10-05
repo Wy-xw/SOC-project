@@ -1,0 +1,11 @@
+cycle_id,pool,variant,rmse
+07-01-17_01.30 n20degC_trise_Cycle_2_Pan18650PF,eval,default,16.952768971836385
+07-01-17_01.30 n20degC_trise_Cycle_2_Pan18650PF,eval,grid_r1e-05_q1e-08,46.9564100859118
+07-01-17_01.30 n20degC_trise_Cycle_2_Pan18650PF,eval,grid_r1e-05_q1e-09,51.448776393873516
+07-01-17_01.30 n20degC_trise_Cycle_2_Pan18650PF,eval,grid_r1e-05_q1e-10,52.57072072998224
+07-01-17_01.30 n20degC_trise_Cycle_2_Pan18650PF,eval,grid_r1e-04_q1e-08,17.92057021523454
+07-01-17_01.30 n20degC_trise_Cycle_2_Pan18650PF,eval,grid_r1e-04_q1e-09,16.952768971836385
+07-01-17_01.30 n20degC_trise_Cycle_2_Pan18650PF,eval,grid_r1e-04_q1e-10,16.726609270793624
+07-01-17_01.30 n20degC_trise_Cycle_2_Pan18650PF,eval,grid_r1e-03_q1e-08,20.320022532952628
+07-01-17_01.30 n20degC_trise_Cycle_2_Pan18650PF,eval,grid_r1e-03_q1e-09,20.846154197030465
+07-01-17_01.30 n20degC_trise_Cycle_2_Pan18650PF,eval,grid_r1e-03_q1e-10,21.036355515354646

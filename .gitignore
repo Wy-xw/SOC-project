@@ -1,0 +1,10 @@
+__pycache__/
+*.py[cod]
+*.bak
+*.bak_*
+.venv/
+venv/
+*.npz
+04_实验/数据/raw/
+*.svg
+.DS_Store
