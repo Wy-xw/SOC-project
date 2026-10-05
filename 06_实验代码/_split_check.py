@@ -21,7 +21,7 @@ import sys
 import pandas as pd
 __ROOT__ = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
 
-ROOT = os.path.join(__ROOT__, "SOC论文项目")
+ROOT = __ROOT__
 RESULTS = os.path.join(ROOT, "04_实验", "数据", "results")
 SPLITS = os.path.join(ROOT, "04_实验", "数据", "splits")
 OUT = os.path.join(ROOT, "_tmp_imgs", "_split_check.txt")

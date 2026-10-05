@@ -6,6 +6,7 @@
   2. 效应/种子变异比 = |mean_s(delta)| / SD_s(delta)   (ddof=0)
 """
 import csv, math, sys, collections
+import os
 __ROOT__ = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
 
 sys.stdout.reconfigure(encoding="utf-8")

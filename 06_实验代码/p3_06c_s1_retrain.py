@@ -44,7 +44,7 @@ import nn_features as NF  # noqa: E402
 from nn_features import GROUPS, load_history  # noqa: E402
 import p3_06_ablation as A  # noqa: E402
 
-PROJ = os.path.join(__ROOT__, "SOC论文项目")
+PROJ = __ROOT__
 RESULTS = os.path.join(PROJ, "04_实验", "数据", "results")
 MODELS_S1 = os.path.join(PROJ, "04_实验", "models_s1")
 CN_NOMINAL = 2.9

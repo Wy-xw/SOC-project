@@ -22,7 +22,7 @@ from ecm_ekf import ECMParams, SOC_EKF  # noqa: E402
 from ecm_tables import OCVTable, ECMParamTable, make_ekf_table_fns  # noqa: E402
 __ROOT__ = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
 
-PROJ = os.path.join(__ROOT__, "SOC论文项目")
+PROJ = __ROOT__
 DATA = os.path.join(PROJ, "04_实验", "数据", "processed")
 RES = os.path.join(PROJ, "04_实验", "数据", "results")
 BURN = 300

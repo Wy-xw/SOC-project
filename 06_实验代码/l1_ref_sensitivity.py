@@ -24,7 +24,7 @@ for _s in (sys.stdout, sys.stderr):
     if hasattr(_s, "reconfigure"):
         _s.reconfigure(encoding="utf-8", errors="replace")
 
-ROOT = os.path.join(__ROOT__, "SOC论文项目")
+ROOT = __ROOT__
 RESULTS = os.path.join(ROOT, "04_实验", "数据", "results")
 
 #: 口径的显示顺序与中文名（与 CB-2 报告 §2 一致）

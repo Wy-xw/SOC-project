@@ -10,6 +10,7 @@
 报告双侧 p 与置换分布，并写清零假设。
 """
 import csv, math, random, sys, collections
+import os
 __ROOT__ = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
 
 sys.stdout.reconfigure(encoding="utf-8")

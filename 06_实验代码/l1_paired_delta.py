@@ -41,7 +41,7 @@ for _s in (sys.stdout, sys.stderr):
     if hasattr(_s, "reconfigure"):
         _s.reconfigure(encoding="utf-8", errors="replace")
 
-ROOT = os.path.join(__ROOT__, "SOC论文项目")
+ROOT = __ROOT__
 RESULTS = os.path.join(ROOT, "04_实验", "数据", "results")
 
 #: 要做的配对对比。顺序 = 论文里的叙述顺序。

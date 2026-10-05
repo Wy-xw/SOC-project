@@ -46,7 +46,7 @@ import sys
 import numpy as np
 import pandas as pd
 
-PROJECT_ROOT = os.path.join(__ROOT__, "SOC论文项目")
+PROJECT_ROOT = __ROOT__
 sys.path.insert(0, os.path.join(PROJECT_ROOT, "10_代码", "src"))
 sys.path.insert(0, os.path.join(PROJECT_ROOT, "10_代码"))
 

@@ -17,7 +17,7 @@ for _s in (sys.stdout, sys.stderr):
     if hasattr(_s, "reconfigure"):
         _s.reconfigure(encoding="utf-8", errors="replace")
 
-ROOT = os.path.join(__ROOT__, "SOC论文项目")
+ROOT = __ROOT__
 RESULTS = os.path.join(ROOT, "04_实验", "数据", "results")
 OUT = os.path.join(RESULTS, "l1_cb1_recheck.md")
 

@@ -11,6 +11,7 @@ from __future__ import annotations
 
 import numpy as np
 import pandas as pd
+import os
 
 PROJECT_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
 PATH = PROJECT_ROOT + r"\04_实验\数据\processed\mcmaster_ocv_c20.csv.gz"

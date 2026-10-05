@@ -8,6 +8,7 @@
   符号一致率 = 每 seed 的组均值是否与合并均值同号
 """
 import csv, math, sys, collections
+import os
 __ROOT__ = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
 
 sys.stdout.reconfigure(encoding="utf-8")

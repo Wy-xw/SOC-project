@@ -28,7 +28,7 @@ import numpy as np
 import pandas as pd
 __ROOT__ = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
 
-PROJ = os.path.join(__ROOT__, "SOC论文项目")
+PROJ = __ROOT__
 RES = os.path.join(PROJ, "04_实验", "数据", "results")
 TEMPS = [-20.0, -10.0, 0.0, 10.0, 25.0]
 

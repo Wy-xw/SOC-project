@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 """按温度分组重算符号一致率（与合并均值同号的种子-温度格数）。"""
 import csv, sys, collections
+import os
 __ROOT__ = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
 
 sys.stdout.reconfigure(encoding="utf-8")

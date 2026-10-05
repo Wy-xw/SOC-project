@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 """R1-M1 要求的种子层面证据：交互项与直接对比的跨种子符号一致率与效应/种子比。"""
 import csv, math, sys, collections
+import os
 __ROOT__ = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
 
 sys.stdout.reconfigure(encoding="utf-8")

@@ -4,6 +4,7 @@ import sys
 
 import numpy as np
 import pandas as pd
+import os
 __ROOT__ = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
 
 sys.stdout.reconfigure(encoding="utf-8", errors="replace")
