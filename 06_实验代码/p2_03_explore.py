@@ -1,7 +1,8 @@
 # -*- coding: utf-8 -*-
 """P2-03 探查：HPPC 组织结构（温度/cycle/段/SOC 覆盖）。只拿事实，不画图。"""
 import pandas as pd, numpy as np
-P = r"E:\SOC论文项目\04_实验\数据\processed\mcmaster_hppc.csv.gz"
+__ROOT__ = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
+P = os.path.join(__ROOT__, "04_实验", "数据", "processed", "mcmaster_hppc.csv.gz")
 d = pd.read_csv(P, usecols=["timestamp", "current_A", "voltage_V",
                             "soc_true", "cycle_id", "temperature_c"])
 print("== 温度分布 ==")

@@ -15,8 +15,9 @@ import sys
 
 import numpy as np
 import pandas as pd
+__ROOT__ = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
 
-RES = r"E:\SOC论文项目\04_实验\数据\results"
+RES = os.path.join(__ROOT__, "04_实验", "数据", "results")
 GRP = ["test_id(25C)", "ood(10C)", "ood(0C)", "ood(-10C)", "ood(-20C)"]
 LAB = {"test_id(25C)": "25 °C", "ood(10C)": "10 °C", "ood(0C)": "0 °C",
        "ood(-10C)": "−10 °C", "ood(-20C)": "−20 °C"}

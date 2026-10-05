@@ -31,19 +31,20 @@ import os
 import sys
 import time
 
-sys.path.insert(0, r"E:\SOC论文项目\06_实验代码\src")
-sys.path.insert(0, r"E:\SOC论文项目\06_实验代码")
+sys.path.insert(0, os.path.join(__ROOT__, "06_实验代码", "src"))
+sys.path.insert(0, os.path.join(__ROOT__, "06_实验代码"))
 os.environ.setdefault("TF_CPP_MIN_LOG_LEVEL", "2")
 
 import numpy as np  # noqa: E402
 import pandas as pd  # noqa: E402
 from tensorflow import keras  # noqa: E402
+__ROOT__ = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
 
 import nn_features as NF  # noqa: E402
 from nn_features import GROUPS, load_history  # noqa: E402
 import p3_06_ablation as A  # noqa: E402
 
-PROJ = r"E:\SOC论文项目"
+PROJ = os.path.join(__ROOT__, "SOC论文项目")
 RESULTS = os.path.join(PROJ, "04_实验", "数据", "results")
 MODELS_S1 = os.path.join(PROJ, "04_实验", "models_s1")
 CN_NOMINAL = 2.9

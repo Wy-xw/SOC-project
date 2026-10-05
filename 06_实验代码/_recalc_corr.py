@@ -8,9 +8,10 @@ R3 的质疑：A2-1 − A2-4 在算术上恒等于 (A2-1 − A2-0) − (A2-4 −
 "稳健"是配对设计的正常收益，还是被掩蔽的不稳定。
 """
 import csv, math, sys, collections
+__ROOT__ = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
 
 sys.stdout.reconfigure(encoding="utf-8")
-RES = r"E:\SOC论文项目\04_实验\数据\results"
+RES = os.path.join(__ROOT__, "04_实验", "数据", "results")
 OOD = ["ood(10C)", "ood(0C)", "ood(-10C)", "ood(-20C)"]
 
 rows = list(csv.DictReader(open(f"{RES}\\p5_b2_perfile_seed10.csv",

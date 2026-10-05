@@ -4,9 +4,10 @@ import sys
 
 import numpy as np
 import pandas as pd
+__ROOT__ = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
 
 sys.stdout.reconfigure(encoding="utf-8", errors="replace")
-RES = r"E:\SOC论文项目\04_实验\数据\results"
+RES = os.path.join(__ROOT__, "04_实验", "数据", "results")
 OOD = ["ood(10C)", "ood(0C)", "ood(-10C)", "ood(-20C)"]
 d = pd.read_csv(f"{RES}/p5_b2_perfile_seed10.csv")
 g = d.groupby(["exp", "seed", "eval_group"]).RMSE.mean().unstack("eval_group")

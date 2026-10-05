@@ -17,9 +17,10 @@ for _s in (sys.stdout, sys.stderr):
     if hasattr(_s, "reconfigure"):
         _s.reconfigure(encoding="utf-8", errors="replace")
 
-ROOT = r"E:\SOC论文项目"
+ROOT = os.path.join(__ROOT__, "SOC论文项目")
 sys.path.insert(0, os.path.join(ROOT, "10_代码", "src"))
 from nn_features import BURN_IN, load_history  # noqa: E402
+__ROOT__ = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
 
 RESULTS = os.path.join(ROOT, "04_实验", "数据", "results")
 

@@ -1,9 +1,10 @@
 # -*- coding: utf-8 -*-
 """按温度分组重算符号一致率（与合并均值同号的种子-温度格数）。"""
 import csv, sys, collections
+__ROOT__ = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
 
 sys.stdout.reconfigure(encoding="utf-8")
-RES = r"E:\SOC论文项目\04_实验\数据\results"
+RES = os.path.join(__ROOT__, "04_实验", "数据", "results")
 
 rows = list(csv.DictReader(open(f"{RES}\\l1_paired_delta_perfile_seed10.csv",
                                 encoding="utf-8-sig")))

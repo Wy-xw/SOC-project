@@ -21,8 +21,9 @@ import sys
 sys.stdout.reconfigure(encoding="utf-8", errors="replace")
 import numpy as np  # noqa: E402
 import pandas as pd  # noqa: E402
+__ROOT__ = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
 
-RESULTS = r"E:\SOC论文项目\04_实验\数据\results"
+RESULTS = os.path.join(__ROOT__, "04_实验", "数据", "results")
 GROUPS = ["ood(10C)", "ood(0C)", "ood(-10C)", "ood(-20C)"]
 
 

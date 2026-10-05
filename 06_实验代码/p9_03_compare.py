@@ -19,9 +19,10 @@ import io
 import math
 import os
 import sys
+__ROOT__ = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
 
 sys.stdout.reconfigure(encoding="utf-8")
-R = r"E:\SOC论文项目\04_实验\数据\results"
+R = os.path.join(__ROOT__, "04_实验", "数据", "results")
 T_CRIT = {4: 3.182, 9: 2.306}
 GROUPS = ["test_id(25C)", "ood(10C)", "ood(0C)", "ood(-10C)", "ood(-20C)"]
 OUT = os.path.join(R, "p9_03_ocvT_compare.csv")

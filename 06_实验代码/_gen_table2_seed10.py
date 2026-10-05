@@ -6,9 +6,10 @@
 import sys
 
 import pandas as pd
+__ROOT__ = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
 
 sys.stdout.reconfigure(encoding="utf-8", errors="replace")
-RES = r"E:\SOC论文项目\04_实验\数据\results"
+RES = os.path.join(__ROOT__, "04_实验", "数据", "results")
 ORDER = ["test_id(25C)", "ood(10C)", "ood(0C)", "ood(-10C)", "ood(-20C)"]
 LAB = {"test_id(25C)": "test\\\\_id (25 \\\\textdegree C)",
        "ood(10C)": "ood (10 \\\\textdegree C)", "ood(0C)": "ood (0 \\\\textdegree C)",

@@ -24,8 +24,8 @@ import os
 import sys
 import time
 
-sys.path.insert(0, r"E:\SOC论文项目\06_实验代码\src")
-sys.path.insert(0, r"E:\SOC论文项目\06_实验代码")
+sys.path.insert(0, os.path.join(__ROOT__, "06_实验代码", "src"))
+sys.path.insert(0, os.path.join(__ROOT__, "06_实验代码"))
 os.environ.setdefault("TF_CPP_MIN_LOG_LEVEL", "2")
 
 import numpy as np  # noqa: E402
@@ -34,9 +34,10 @@ from tensorflow import keras  # noqa: E402
 
 from nn_features import GROUPS, build_split_arrays  # noqa: E402
 import p3_06_ablation as A  # noqa: E402
+__ROOT__ = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
 
-RESULTS = r"E:\SOC论文项目\04_实验\数据\results"
-MODELS = r"E:\SOC论文项目\04_实验\models"
+RESULTS = os.path.join(__ROOT__, "04_实验", "数据", "results")
+MODELS = os.path.join(__ROOT__, "04_实验", "models")
 
 #: 原 3 个种子 + 新增 7 个（共 10）。
 # ⚠️ 2026-10-03：初版拟 15 种子，但**训练耗时按单次实测外推，估错 8 倍**

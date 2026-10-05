@@ -8,9 +8,10 @@
   符号一致率 = 每 seed 的组均值是否与合并均值同号
 """
 import csv, math, sys, collections
+__ROOT__ = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
 
 sys.stdout.reconfigure(encoding="utf-8")
-RES = r"E:\SOC论文项目\04_实验\数据\results"
+RES = os.path.join(__ROOT__, "04_实验", "数据", "results")
 
 T_CRIT = {4: 3.182, 9: 2.306, 12: 2.179, 40: 2.021, 90: 1.987}
 GROUPS = ["test_id(25C)", "ood(10C)", "ood(0C)", "ood(-10C)", "ood(-20C)"]

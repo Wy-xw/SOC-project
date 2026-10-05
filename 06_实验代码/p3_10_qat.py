@@ -62,6 +62,7 @@ import warnings
 import numpy as np
 import pandas as pd
 
+__ROOT__ = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
 warnings.filterwarnings("ignore", category=UserWarning)
 os.environ.setdefault("TF_CPP_MIN_LOG_LEVEL", "3")
 
@@ -81,7 +82,7 @@ for _s in (sys.stdout, sys.stderr):
 RESULTS = os.path.join(PROJECT_ROOT, "04_实验", "数据", "results")
 MODELS_DIR = os.path.join(PROJECT_ROOT, "04_实验", "models")
 # TFLite 路径不能含中文，用绝对 ASCII 路径
-QUANT_DIR = r"E:\SOC_LiteProject\quantized"
+QUANT_DIR = os.path.join(__ROOT__, "quantized")
 SEEDS = [7, 13, 42]
 N_CALIB = 200
 

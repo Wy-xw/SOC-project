@@ -38,6 +38,7 @@ CB-2 口径扫描：SOC 真值定基口径 → 消融对比的稳健性包络。
 from __future__ import annotations
 
 import importlib.util
+__ROOT__ = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
 import os
 import re
 import sys
@@ -45,7 +46,7 @@ import sys
 import numpy as np
 import pandas as pd
 
-PROJECT_ROOT = r"E:\SOC论文项目"
+PROJECT_ROOT = os.path.join(__ROOT__, "SOC论文项目")
 sys.path.insert(0, os.path.join(PROJECT_ROOT, "10_代码", "src"))
 sys.path.insert(0, os.path.join(PROJECT_ROOT, "10_代码"))
 

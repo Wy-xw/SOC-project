@@ -34,9 +34,10 @@ from __future__ import annotations
 
 import os
 import sys
+__ROOT__ = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
 
 sys.stdout.reconfigure(encoding="utf-8", errors="replace")
-sys.path.insert(0, os.path.join(r"E:\SOC论文项目", "06_实验代码", "src"))
+sys.path.insert(0, os.path.join(os.path.join(__ROOT__, "SOC论文项目"), "06_实验代码", "src"))
 os.environ.setdefault("TF_CPP_MIN_LOG_LEVEL", "3")
 
 import numpy as np  # noqa: E402
@@ -45,7 +46,7 @@ import pandas as pd  # noqa: E402
 from ecm_ekf import ECMParams, SOC_EKF  # noqa: E402
 from ecm_tables import OCVTable, ECMParamTable, make_ekf_table_fns  # noqa: E402
 
-PROJ = r"E:\SOC论文项目"
+PROJ = os.path.join(__ROOT__, "SOC论文项目")
 DATA = os.path.join(PROJ, "04_实验", "数据", "processed")
 RES = os.path.join(PROJ, "04_实验", "数据", "results")
 SOC0_BIAS = 0.10          # 与 p5_00_full_history.py 一致

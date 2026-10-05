@@ -11,12 +11,13 @@ import sys
 
 import numpy as np
 import pandas as pd
+__ROOT__ = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
 
 for _s in (sys.stdout, sys.stderr):
     if hasattr(_s, "reconfigure"):
         _s.reconfigure(encoding="utf-8", errors="replace")
 
-ROOT = r"E:\SOC论文项目"
+ROOT = os.path.join(__ROOT__, "SOC论文项目")
 RESULTS = os.path.join(ROOT, "04_实验", "数据", "results")
 OUT = os.path.join(RESULTS, "l1_cb1_recheck.md")
 

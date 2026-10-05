@@ -11,9 +11,10 @@ R1-M1 的指控：中心主张"两族不等价"要求证明两族效应**彼此*
 口径与 §5.3 一致：每文件先跨种子平均 -> 文件级配对 -> 文件间双侧 t 95% CI。
 """
 import csv, math, sys, collections
+__ROOT__ = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
 
 sys.stdout.reconfigure(encoding="utf-8")
-RES = r"E:\SOC论文项目\04_实验\数据\results"
+RES = os.path.join(__ROOT__, "04_实验", "数据", "results")
 T_CRIT = {4: 3.182, 9: 2.306}
 GROUPS = ["test_id(25C)", "ood(10C)", "ood(0C)", "ood(-10C)", "ood(-20C)"]
 

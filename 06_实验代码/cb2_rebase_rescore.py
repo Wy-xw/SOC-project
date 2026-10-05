@@ -38,13 +38,14 @@ from __future__ import annotations
 import importlib.util
 import os
 import re
+__ROOT__ = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
 import sys
 
 import numpy as np
 import pandas as pd
 from scipy import stats
 
-PROJECT_ROOT = r"E:\SOC论文项目"
+PROJECT_ROOT = os.path.join(__ROOT__, "SOC论文项目")
 sys.path.insert(0, os.path.join(PROJECT_ROOT, "10_代码", "src"))
 sys.path.insert(0, os.path.join(PROJECT_ROOT, "10_代码"))
 

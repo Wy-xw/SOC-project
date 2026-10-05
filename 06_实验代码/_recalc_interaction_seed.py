@@ -1,9 +1,10 @@
 # -*- coding: utf-8 -*-
 """R1-M1 要求的种子层面证据：交互项与直接对比的跨种子符号一致率与效应/种子比。"""
 import csv, math, sys, collections
+__ROOT__ = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
 
 sys.stdout.reconfigure(encoding="utf-8")
-RES = r"E:\SOC论文项目\04_实验\数据\results"
+RES = os.path.join(__ROOT__, "04_实验", "数据", "results")
 GROUPS = ["test_id(25C)", "ood(10C)", "ood(0C)", "ood(-10C)", "ood(-20C)"]
 
 rows = list(csv.DictReader(open(f"{RES}\\p5_b2_perfile_seed10.csv",

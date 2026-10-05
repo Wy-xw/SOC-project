@@ -18,9 +18,10 @@ import csv
 import io
 import os
 import sys
+__ROOT__ = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
 
 sys.stdout.reconfigure(encoding="utf-8")
-RESULTS = r"E:\SOC论文项目\04_实验\数据\results"
+RESULTS = os.path.join(__ROOT__, "04_实验", "数据", "results")
 BATCH1 = os.path.join(RESULTS, "p7_02_0C_ablation_seed3.csv")
 BATCH2 = os.path.join(RESULTS, "p7_02_0C_ablation.csv")
 MERGED = os.path.join(RESULTS, "p7_02_0C_ablation_seed10.csv")

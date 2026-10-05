@@ -22,15 +22,16 @@ import os
 import sys
 
 sys.stdout.reconfigure(encoding="utf-8", errors="replace")
-sys.path.insert(0, r"E:\SOC论文项目\06_实验代码\src")
+sys.path.insert(0, os.path.join(__ROOT__, "06_实验代码", "src"))
 os.environ.setdefault("TF_CPP_MIN_LOG_LEVEL", "3")
 
 import numpy as np  # noqa: E402
 import pandas as pd  # noqa: E402
 
 from nn_features import GROUPS, build_split_arrays, load_history  # noqa: E402
+__ROOT__ = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
 
-PROJ = r"E:\SOC论文项目"
+PROJ = os.path.join(__ROOT__, "SOC论文项目")
 RES = os.path.join(PROJ, "04_实验", "数据", "results")
 MODELS = os.path.join(PROJ, "04_实验", "models")
 SEEDS = [7, 13, 42, 101, 202, 303, 404, 505, 606, 707]

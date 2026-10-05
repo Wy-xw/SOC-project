@@ -18,9 +18,10 @@ import sys
 
 import numpy as np
 import pandas as pd
+__ROOT__ = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
 
 PROJECT_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
-QUANT_DIR = r"E:\SOC_LiteProject\quantized"
+QUANT_DIR = os.path.join(__ROOT__, "quantized")
 MODELS_DIR = os.path.join(PROJECT_ROOT, "04_实验", "models")
 
 

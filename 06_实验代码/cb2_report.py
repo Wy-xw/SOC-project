@@ -8,10 +8,11 @@ import sys
 import numpy as np
 import pandas as pd
 from scipy import stats
+__ROOT__ = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
 
 sys.stdout.reconfigure(encoding="utf-8", errors="replace")
 
-R = r"E:\SOC论文项目\04_实验\数据\results"
+R = os.path.join(__ROOT__, "04_实验", "数据", "results")
 df = pd.read_csv(os.path.join(R, "cb2_rescore_perfile.csv"))
 ORDER = ["test_id(25C)", "ood(10C)", "ood(0C)", "ood(-10C)", "ood(-20C)"]
 df["eval_group"] = pd.Categorical(df.eval_group, ORDER, ordered=True)
